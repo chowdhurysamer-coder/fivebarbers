@@ -3,6 +3,11 @@
 Website for **5 Barbers**, the old-school barber shop at 691 Walt Whitman Rd,
 Melville, NY 11747 — cutting hair on Route 110 since 1955.
 
+**Live site:** https://chowdhurysamer-coder.github.io/fivebarbers/
+
+Deploys automatically via GitHub Pages on every push to this branch
+(`.github/workflows/deploy-pages.yml`).
+
 ## What's here
 
 A hand-built static site — no frameworks, no build step. Open `index.html`
