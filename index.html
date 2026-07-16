@@ -8,11 +8,14 @@
   <meta property="og:title" content="5 Barbers · Melville, NY · Since 1955">
   <meta property="og:description" content="Old-school haircuts and hot towel shaves. Walk right in — no appointment needed.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3GYBS62dxIIG18Q4M3dG53faoa7/hf_20260715_232645_d1cd0ad6-0afd-4751-915f-c41504f59fdc.png">
+  <meta name="theme-color" content="#101319">
+  <link rel="preload" as="image" fetchpriority="high" href="https://d8j0ntlcm91z4.cloudfront.net/user_3GYBS62dxIIG18Q4M3dG53faoa7/hf_20260715_232645_d1cd0ad6-0afd-4751-915f-c41504f59fdc.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Oswald:wght@400;500;600&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;1,400&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💈</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='9' y='2' width='14' height='28' rx='7' fill='%23f4eddd' stroke='%231c1b18' stroke-width='2'/%3E%3Cpath d='M10 24 L22 12 M10 17 L22 5 M10 31 L22 19' stroke='%23b01f24' stroke-width='4'/%3E%3Cpath d='M10 20.5 L22 8.5 M10 27.5 L22 15.5' stroke='%231e3a8a' stroke-width='2.5'/%3E%3Crect x='9' y='2' width='14' height='28' rx='7' fill='none' stroke='%231c1b18' stroke-width='2'/%3E%3C/svg%3E">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -90,9 +93,25 @@
       </div>
       <p class="hero__status" id="openStatus" aria-live="polite"></p>
     </div>
+    <div class="hero__stamp" aria-hidden="true">
+      <svg viewBox="0 0 120 120">
+        <defs>
+          <path id="stampCircle" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0"/>
+        </defs>
+        <g class="hero__stamp-ring">
+          <text>
+            <textPath href="#stampCircle">EST. 1955 &#183; MELVILLE N.Y. &#183;</textPath>
+          </text>
+        </g>
+        <g class="hero__stamp-center">
+          <text x="60" y="72" text-anchor="middle">5</text>
+        </g>
+      </svg>
+    </div>
     <div class="hero__bottom" aria-hidden="true">
       <span class="hero__scroll">scroll</span>
     </div>
+    <div class="checker" aria-hidden="true"></div>
   </section>
 
   <!-- ============ INTRO STRIP ============ -->
@@ -196,6 +215,28 @@
     </div>
   </section>
 
+  <!-- ============ GALLERY ============ -->
+  <section class="gallery" id="gallery">
+    <div class="gallery__head reveal">
+      <p class="kicker kicker--red">Around the shop</p>
+      <h2>Take a look before you take a seat</h2>
+    </div>
+    <div class="gallery__row">
+      <figure class="gallery__item reveal">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3GYBS62dxIIG18Q4M3dG53faoa7/hf_20260716_000852_bb1a35f5-5557-4458-b14c-004306061a10.png" width="880" height="1168" alt="The striped barber pole glowing outside the shop window at dusk" loading="lazy">
+        <figcaption>The pole's been spinning since '55.</figcaption>
+      </figure>
+      <figure class="gallery__item reveal reveal--delay">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3GYBS62dxIIG18Q4M3dG53faoa7/hf_20260716_000855_856d5234-5128-4617-bdb4-58779e5f3750.png" width="1168" height="880" alt="Vintage barber tools laid out on a leather station mat" loading="lazy">
+        <figcaption>The tools of the trade — no gimmicks.</figcaption>
+      </figure>
+      <figure class="gallery__item reveal reveal--delay2">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3GYBS62dxIIG18Q4M3dG53faoa7/hf_20260716_000857_c77a0cdb-bd4d-4d17-8937-51eeaf0d9602.png" width="880" height="1168" alt="A classic chrome and red leather barber chair on the checkered floor" loading="lazy">
+        <figcaption>Your chair's waiting.</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <!-- ============ REVIEWS ============ -->
   <section class="reviews" id="reviews">
     <div class="reviews__head reveal">
@@ -292,6 +333,14 @@
         <p class="visit__small">Since 1955 · Clean shop · Walk-ins welcome</p>
       </div>
     </div>
+    <div class="visit__map reveal">
+      <iframe
+        src="https://www.google.com/maps?q=5+Barbers,+691+Walt+Whitman+Rd,+Melville,+NY+11747&output=embed"
+        title="Map to 5 Barbers, 691 Walt Whitman Rd, Melville NY"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
   </section>
 
   <!-- ============ FOOTER ============ -->
@@ -300,7 +349,9 @@
       <span class="footer__five">5</span><span class="footer__word">BARBERS</span>
     </div>
     <p class="footer__line">691 Walt Whitman Rd, Melville, NY 11747 · <a href="tel:+16314235749">(631) 423-5749</a></p>
+    <p class="footer__hours">Mon 10–4 · Tue–Fri 8–6 · Sun 8–5 · Sat closed</p>
     <p class="footer__est">Cutting hair on Route 110 since 1955</p>
+    <a class="footer__top" href="#top">Back to the top ↑</a>
   </footer>
 
   <script src="js/main.js"></script>
