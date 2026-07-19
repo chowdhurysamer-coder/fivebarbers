@@ -786,14 +786,15 @@ h2 {
   position: absolute;
   inset: 2.6rem 2.4rem 3.4rem;
   opacity: 0;
-  transform: translateY(8px);
-  transition: opacity .5s ease, transform .5s ease;
+  transform: translateX(56px);
+  transition: opacity .55s ease, transform .55s ease;
   pointer-events: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
+.quote.is-leaving { opacity: 0; transform: translateX(-56px); }
 .quote.is-active { opacity: 1; transform: none; pointer-events: auto; }
 .quote p {
   font-size: clamp(1.15rem, 2.4vw, 1.45rem);

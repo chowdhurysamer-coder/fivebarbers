@@ -1,4 +1,4 @@
-/* 5 Barbers · Melville, NY — front-of-house scripts */
+/* 5 Barbers · Melville, NY. Front-of-house scripts. */
 (function () {
   "use strict";
 
@@ -44,18 +44,18 @@
 
     if (el) {
       if (open) {
-        el.innerHTML = '<span class="dot dot--open"></span>Open now — the pole is spinning · till ' + fmtHour(slot[1]);
+        el.innerHTML = '<span class="dot dot--open"></span>Open now until ' + fmtHour(slot[1]) + ". Come on in.";
       } else {
         var next = nextOpening(now);
         el.innerHTML = '<span class="dot dot--closed"></span>Closed right now' +
-          (next ? " — back " + next.label + " at " + fmtHour(next.hour) : "");
+          (next ? ". Back " + next.label + " at " + fmtHour(next.hour) : "");
       }
     }
 
     if (todayLine) {
       todayLine.textContent = open
-        ? "Chairs are turning — come on down."
-        : (slot ? "Today: " + fmtHour(slot[0]) + " to " + fmtHour(slot[1]) + "." : "Sundays we're in, Saturdays we rest.");
+        ? "Chairs are turning right now. Come on down."
+        : (slot ? "Today: " + fmtHour(slot[0]) + " to " + fmtHour(slot[1]) + "." : "Closed Saturdays. See you Sunday at 8.");
     }
 
     // highlight today's row on the hours table
@@ -78,7 +78,11 @@
     var timer = null;
 
     function show(i) {
-      quotes[current].classList.remove("is-active");
+      if (i === current) return;
+      var leaving = quotes[current];
+      leaving.classList.remove("is-active");
+      leaving.classList.add("is-leaving");
+      setTimeout(function () { leaving.classList.remove("is-leaving"); }, 600);
       dotsWrap.children[current].classList.remove("is-active");
       current = i;
       quotes[current].classList.add("is-active");
@@ -101,8 +105,11 @@
       dotsWrap.appendChild(b);
     });
 
-    boardEl.addEventListener("mouseenter", function () { clearInterval(timer); });
-    boardEl.addEventListener("mouseleave", restart);
+    // pause while a mouse is over the board; touch taps shouldn't stop the rotation
+    if (window.matchMedia && window.matchMedia("(hover: hover)").matches) {
+      boardEl.addEventListener("mouseenter", function () { clearInterval(timer); });
+      boardEl.addEventListener("mouseleave", restart);
+    }
     restart();
   }
 
